@@ -1,0 +1,122 @@
+.header {
+  border-bottom: #ececec 1px solid;
+
+  &__top {
+    display: flex;
+  }
+}
+// Logo
+
+.nav__header-logo {
+  font-family: $font-Raleway;
+  font-size: 26px;
+  line-height: 1.17;
+  text-decoration: none;
+  color: $accent-color;
+
+  &-half {
+    color: $tittle-text-color;
+  }
+}
+
+// Navigation
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__menu {
+    display: flex;
+    margin-left: 94px;
+    list-style: none;
+  }
+
+  &__item + &__item {
+    margin-left: 50px;
+  }
+
+  &__item {
+    position: relative;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $tittle-text-color;
+  text-decoration: none;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+  transition: color $cubic-anim;
+
+  &--current:focus,
+  &--current:hover {
+    color: $button-background-color;
+  }
+
+  &--current::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    width: 100%;
+    display: block;
+    height: 4px;
+    border-radius: 2px;
+    background-size: contain;
+    background-color: $accent-color;
+  }
+
+  &--current:hover::after {
+    transform: skaleX(1);
+  }
+
+  &--current,
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+// Header Address
+
+.address {
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.17;
+    color: $primary-text-color;
+    transition: color $cubic-anim;
+  }
+
+  &__item + &__item {
+    margin-left: 50px;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+
+  &__icon:hover,
+  &__icon:focus {
+    fill: currentColor;
+  }
+}
