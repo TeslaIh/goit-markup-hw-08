@@ -13,3 +13,9 @@
   transition: background-color $cubic-anim, color $cubic-anim,
     box-shadow $cubic-anim;
 }
+
+@mixin CenterFlex($type-main: flex-start, $type-cross: stretch) {
+    display: flex;
+    justify-content: $type-main;
+    align-items: $type-cross;
+}
