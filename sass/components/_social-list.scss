@@ -1,0 +1,54 @@
+.social-list {
+    @include centerdFlex(center);
+    padding-left: 30px;
+    padding-right: 30px;
+
+ &__network {
+    @include centerdFlex(center, center);
+    @extend %social-link;
+
+ &:focus,
+ &:hover {
+    background-color: $accent-color;
+}
+ }
+
+ &__icon {
+    fill: $icon-color;
+    @include transition(fill);
+ }
+ 
+ &__network:hover &__icon,
+ &__network:focus &__icon {
+    fill: $primary-white-color;
+}
+ }
+
+ .join__title {
+    @extend %title-footer;
+    text-align: center;
+}
+
+.social-footer {
+    @include centerdFlex(center);
+    margin-bottom: 60px;
+
+ &__item:not(:last-child) { 
+    margin-right: 10px;
+}
+
+ &__link {
+    @include centerdFlex(center, center);
+    @extend %social-link;
+    background-color: $social-network-color;
+ }
+
+ &__link:hover,
+ &__link:focus {
+    background-color: $accent-color;
+}
+
+ &__icon {
+    fill: $primary-white-color;
+}
+ }
