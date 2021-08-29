@@ -1,0 +1,27 @@
+ /* Logo */ 
+
+.basic-nav__logo {
+    @extend %logo;
+
+ &--blue {
+   color: $accent-color;
+}
+
+@media  screen and(min-width: 768px) and (max-width: 1199px)
+{
+    padding: 26px 0;
+ }
+ }
+
+.address-footer__logo {
+    @extend %logo;
+    display: block;
+    margin-bottom: 20px;
+
+ &--blue {
+        color: $accent-color; 
+ }
+ &--white {
+     color: $primary-white-color;
+}
+ }

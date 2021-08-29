@@ -1,0 +1,72 @@
+/* Footer nav */
+
+.footer {
+  background-color: $primary-section-color;
+  padding: 60px 0 60px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-content {
+   display: flex;
+   align-items: baseline;
+
+  @media screen and (min-width: 768px) {
+    @include centerdFlex($type-cross: baseline);
+    flex-wrap: wrap;
+  }
+  @media screen and(min-width: 1200px) {
+    @include centerdFlex($type-cross: baseline);
+  }
+}
+
+.address-footer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.footer-contact {
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+
+  &__item {
+    margin-bottom: 9px;
+    display: block;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__address-link {
+    color: $primary-white-color;
+    text-decoration: none;
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__link {
+    @extend %contact-link;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
