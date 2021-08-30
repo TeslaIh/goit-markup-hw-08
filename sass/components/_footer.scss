@@ -10,15 +10,20 @@
 }
 
 .footer-content {
-   display: flex;
-   align-items: baseline;
+  display: block;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     @include centerdFlex($type-cross: baseline);
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+    align-items: baseline;
   }
   @media screen and(min-width: 1200px) {
     @include centerdFlex($type-cross: baseline);
+    display: flex;
+    align-items: baseline;
   }
 }
 
