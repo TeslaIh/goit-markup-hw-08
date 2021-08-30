@@ -27,11 +27,27 @@
 .join__title {
   @extend %title-footer;
   font-weight: 500;
+  @media screen and (min-width: 768px) and(max-width: 1199px) {
+    @include centerdFlex($type-cross: baseline);
+    position: relative;
+    top: -190px;
+    display: flex;
+    margin-left: 503px;
+  }
 }
+
 
 .social-footer {
   @include centerdFlex(center);
   margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) and(max-width: 1199px) {
+    @include centerdFlex($type-cross: baseline);
+    position: relative;
+    top: -190px;
+    display: flex;
+    margin-left: 473px;
+  }
 
   &__item:not(:last-child) {
     margin-right: 10px;
@@ -52,3 +68,4 @@
     fill: $primary-white-color;
   }
 }
+

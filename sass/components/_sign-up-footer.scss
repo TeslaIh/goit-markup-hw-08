@@ -11,13 +11,23 @@
   &__title {
     @extend %title-footer;
     font-weight: 500;
+
+    @media screen and(min-width: 768px) and(max-width: 1199px) {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -130px;
+  }
   }
 }
 
 .form-sign-up {
-  @media screen and(min-width: 768px) {
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
     @include centerdFlex(center, center);
     flex-direction: column;
+    position: relative;
+    top: -130px;
   }
 
   @media screen and(min-width: 1200px) {
