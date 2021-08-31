@@ -15,7 +15,7 @@
 .customers-list {
    @include centerdFlex(center,center);
    flex-wrap: wrap;
-   margin: -15px;
+   margin: 30px;
 
    @media  screen and (min-width: 768px) {
       @include centerdFlex(center, center);
@@ -38,6 +38,7 @@
    margin: 15px;
 
      @media  screen and (min-width: 768px) {
+      align-items: center;
       width: calc((100% - 6 * 15px) / 3);
   }
 
@@ -49,7 +50,6 @@
 
  &__link {
     @include centerdFlex(center, center);
-    width: 170px;
     height: 92px;
     padding: 16px 32px;
     border: 1px solid $icon-color;
@@ -65,5 +65,9 @@
  &__icon {
     fill: $icon-color; 
     @include transition(fill);
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+       transform: scale(2);
+    }
 }
  }

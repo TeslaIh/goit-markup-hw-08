@@ -42,10 +42,11 @@
 .menu-container {
    background-color: $primary-white-color;
    z-index: 998;
+   height: 100%;
  
  @media screen and (max-width: 767px) {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
