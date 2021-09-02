@@ -4,7 +4,6 @@
   text-align: center;
   padding: 200px 0;
   justify-content: center;
-
   background-color: $primary-section-color;
   min-width: 320px;
   max-width: 480px;
@@ -38,8 +37,6 @@
       ),
       url("../images/tablet.jpg");
         min-width: 100%;
-      margin-left: auto;
-        margin-right: auto;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -62,6 +59,8 @@
       url("../images/img.fon.jpg");
     margin-left: auto;
     margin-right: auto;
+    min-width: 768px;
+    max-width: 1600px;
     height: 600px;
 
     @media screen and (min-device-pixel-ratio: 2),
