@@ -2,10 +2,10 @@
 
 .sign-up {
   @media screen and(min-width: 768px) {
-    margin: 0 auto;
   }
+  
   @media screen and(min-width: 1200px) {
-    margin-left: auto;
+    
   }
 
   &__title {
@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    top: -130px;
+    top: -100px;
   }
   }
 }
@@ -27,7 +27,7 @@
     @include centerdFlex(center, center);
     flex-direction: column;
     position: relative;
-    top: -130px;
+    top: -100px;
   }
 
   @media screen and(min-width: 1200px) {

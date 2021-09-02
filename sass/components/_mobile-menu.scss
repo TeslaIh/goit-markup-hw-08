@@ -1,74 +1,75 @@
 .menu-button {
-    @include centerdFlex(center, center);
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    z-index: 999;
-    width: 40px;
-    height: 40px;
-    @include transition(all);
+  @include centerdFlex(center, center);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  @include transition(all);
 
- &:hover .icon-menu,
- &:hover .navigation-close,
- &:focus .icon-menu,
- &:focus .navigation-close {
-       fill: $accent-color;
-    }
- 
-    @media screen and (min-width: 768px) {
-       display: none;
-     }
- }
- 
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  & .navigation-close {
+    display: none;
+  }
+
+  &.is-open .navigation-close {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
 .icon-menu,
 .navigation-close {
-    @include transition(fill);
- }
-.menu-button .navigation-close {
-    display: none;
-    
-  }
- 
-.menu-button.is-open .navigation-close {
-    display: block;
- 
- }
- 
-.menu-button.is-open .icon-menu {
-    display: none;
-  }
- 
+  @include transition(fill);
+}
+
 .menu-container {
-   background-color: $primary-white-color;
-   z-index: 998;
-   height: 100%;
- 
- @media screen and (max-width: 767px) {
+  background-color: $primary-white-color;
+  z-index: 998;
+  position: fixed;
+
+  @media screen and (max-width: 767px) {
     display: none;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
+    height: 100vmax;
     padding: 48px 40px;
     font-size: 40px;
- 
+    transform: translateY(-100%);
+    @include transition(transform);
+
     &.is-open {
-       display: block;
-     }
- } 
- 
- @media screen and (min-width: 767px) and (max-width: 1199px) {
+      display: block;
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
     position: relative;
     display: flex;
     height: 80px;
- }
- 
- @media  screen and(min-width: 1200px) {
+  }
+
+  @media screen and(min-width: 1200px) {
     margin-left: 93px;
     @include centerdFlex(flex-start, baseline);
     position: static;
- }
- 
- }
- 
+  }
+}

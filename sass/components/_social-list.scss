@@ -2,8 +2,10 @@
   @include centerdFlex(center);
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 24px;
 
   &__network {
+    padding-right: 10px;
     @include centerdFlex(center, center);
     @extend %social-link;
 
@@ -12,6 +14,9 @@
       background-color: $accent-color;
     }
   }
+    &__network:last-child {
+    padding-right: 0;
+    }
 
   &__icon {
     fill: $icon-color;
@@ -22,6 +27,11 @@
   &__network:focus &__icon {
     fill: $primary-white-color;
   }
+}
+
+.join {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .join__title {
@@ -39,6 +49,8 @@
 
 .social-footer {
   @include centerdFlex(center);
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 60px;
 
   @media screen and (min-width: 768px) and(max-width: 1199px) {
