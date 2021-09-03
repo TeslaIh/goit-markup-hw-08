@@ -5,6 +5,7 @@
   padding: 60px 0 60px;
   display: flex;
   align-items: baseline;
+  height: 100%;
 }
 
 .footer-content {
@@ -15,7 +16,7 @@
     @include centerdFlex($type-cross: baseline);
     display: block;
     text-align: center;
-    height: 403px;
+    height: 350px;
   }
 
   @media screen and(min-width: 1200px) {

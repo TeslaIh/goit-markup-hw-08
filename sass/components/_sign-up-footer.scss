@@ -1,6 +1,8 @@
 /* Sign-up */
 
 .sign-up {
+  display: block;
+  height: 200;
   @media screen and(min-width: 768px) {
   }
   
@@ -17,7 +19,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    top: -100px;
+    bottom: 150px;
   }
   }
 }
@@ -27,7 +29,7 @@
     @include centerdFlex(center, center);
     flex-direction: column;
     position: relative;
-    top: -100px;
+    bottom: 150px;
   }
 
   @media screen and(min-width: 1200px) {
