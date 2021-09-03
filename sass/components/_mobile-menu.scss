@@ -24,6 +24,7 @@
 
   &.is-open .icon-menu {
     display: none;
+    position: fixed;
   }
 }
 
@@ -45,11 +46,11 @@
 
   @media screen and (max-width: 767px) {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 100vmax;
+    width: 100vw;
+    height: 200vw;
     padding: 48px 40px;
     font-size: 40px;
     transform: translateY(-100%);

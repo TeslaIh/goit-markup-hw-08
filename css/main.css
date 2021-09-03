@@ -114,8 +114,10 @@ ul {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hide {
@@ -1819,6 +1821,7 @@ img {
 
 .menu-button.is-open .icon-menu {
   display: none;
+  position: fixed;
 }
 
 @media screen and (min-width: 768px) {
@@ -1842,11 +1845,11 @@ img {
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 100vmax;
+    width: 100vw;
+    height: 200vw;
     padding: 48px 40px;
     font-size: 40px;
     -webkit-transform: translateY(-100%);

@@ -1,11 +1,11 @@
 .mobile-list {
-     @include centerdFlex(center, center);
+  @include centerdFlex(center, center);
 
- &__item {
-     border: 5 px solid $primary-text-color;
-    }
+  &__item {
+    border: 5 px solid $primary-text-color;
+  }
 
- &__link {
+  &__link {
     font-size: 18px;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -15,13 +15,12 @@
     border-right: 1px solid $primary-text-color;
 
     @media screen and(max-width: 767px) {
-    font-size: 14px;
-    display: flex;
-}
- }
+      font-size: 14px;
+      display: flex;
+    }
+  }
 
-
- @media screen and(min-width: 768px) {
-      display: none;
-}
+  @media screen and(min-width: 768px) {
+    display: none;
+  }
 }
