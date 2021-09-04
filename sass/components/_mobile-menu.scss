@@ -55,8 +55,10 @@
     @include transition(transform);
 
     &.is-open {
-      display: block;
-      transform: translateY(0);
+      display: flex;
+      flex-direction: column;
+      transform: translateY(0) scale(1);
+      @include transition(transform);
     }
   }
 
