@@ -1113,7 +1113,7 @@ img {
   }
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 481px) and (max-width: 767px) {
   .header-contact {
     margin-top: 302px;
   }
