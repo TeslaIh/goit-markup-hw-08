@@ -1113,6 +1113,12 @@ img {
   }
 }
 
+@media screen and (min-width: 481px) {
+  .header-contact {
+    margin-top: 302px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header-contact {
     margin-left: 88px;
